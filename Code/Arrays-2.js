@@ -192,23 +192,134 @@
 // [5,1,3,2,6] => max value  => 6
 
 
-let arr = [5,1,3,2,6] //17
+// let arr = [5,1,3,2,6] //17
 
-function findMax(arr){
-    let max = 0;
-    for(let i = 0; i< arr.length; i++){
-        if(arr[i] > max){
-            max = arr[i];
-        }
-    }
-    return max;
-}
+// function findMax(arr){
+//     let max = 0;
+//     for(let i = 0; i< arr.length; i++){
+//         if(arr[i] > max){
+//             max = arr[i];
+//         }
+//     }
+//     return max;
+// }
 
-let output = arr.reduce(function(max,curr){
-    if(curr > max){
-        max = curr;
-    }
-    return max;
-},0)
+// let output = arr.reduce(function(max,curr){
+//     if(curr > max){
+//         max = curr;
+//     }
+//     return max;
+// },0)
 
-console.log(output)
+// console.log(output)
+
+
+// ########## FOREACH ##############
+
+
+//var arr = [5,1,3,2]; // 5,3,2,1
+
+// a,b => 5,1 => b-a => 1-5 => -4 < 0 => not need to swap 
+// 1,3 => 3-1=> 2 > 0 => 3,1 => 5,3,1,2
+// 1,2 => 2-1=> 1 > 0 => 2,1 => 5,3,2,1
+
+// arr.forEach(elem=>{
+//     console.log(elem);
+// });
+
+// console.log(arr.sort())
+
+// sort=> predefined array function => sort by default in asc mode.
+
+// console.log(arr.sort((a,b)=>a-b)) // asc
+// console.log(arr.sort((a,b)=>b-a)) // desc
+
+// var arr = ["DOG", "cat","rat","peacock","crow"]
+// //           0      1     2       3        4
+// console.log(arr.slice(2)) // print including index 2 and everything after that
+// console.log(arr.slice(0,2)) //start - 0, end - 2-1=1
+
+// console.log(arr[2].slice(2))
+// //slice - it will take values from first argument till second argument-1
+
+// //strings
+// var arr = "elephant, do" // o/p => arrays
+// console.log(arr.split(""))
+// console.log(arr.split(","))
+
+
+//reverse
+// var arr = [5,1,2,6]; //[6,2,1,5]
+
+// console.log(arr.reverse())
+
+
+// ES6 => Destructing 
+
+// let person = {
+//     "name" : "Srihari",
+//     "age" : 23,
+//     "siblings" : ["Rohan,Rahul"]
+// }
+
+//normal way
+// let age = person.age
+// console.log(age)
+
+//destructing way
+
+// 1. Normal destructing
+
+// let {age} = person;
+
+// 2. you will use custom name 
+
+
+// let person = {
+//     "firstName" : "Srihari",
+//     "age" : 23,
+//     "siblings" : ["Rohan,Rahul"]
+// }
+
+// let {age:customAge} = person; // first fetch key age , if i am mentioniong anything
+// // after this : then make that as my variable name => custom name
+// //console.log(customAge)
+// console.log(customAge);
+// console.log(person);
+
+// 1000 people => surname : Shah
+
+// let person = {
+//     "first Name" : "Srihari",
+//     "age" : 23,
+//     "siblings" : {
+//         "brother" : "Rohan",
+//         "sister" : "Mehak"
+//     }
+// }
+
+// console.log(person)
+// let {"first Name":fName, siblings:{brother:b,sister:s}} = person
+// console.log(fName)
+// // console.log(firstName, b,s)
+
+// var person = {
+//     "brother" : "Rahul",
+//     "sister" : "Mehak",
+//     "name" : "Sudhakar",
+//     "age" : 24,
+//     "hobbies": ["Singing", "Trekking"]
+// }
+
+// let {brother,sister,...restDetails}= person // ... => rest operator
+// console.log(restDetails)
+
+var person = ["Singing", "Trekking","Sin", "Trek", "ing"];
+//               0          1        2       3       4            
+
+let [a,b,...rest]= person;
+//   0 1 23 4
+console.log(a,b,rest)
+
+
+
