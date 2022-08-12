@@ -8,15 +8,16 @@
 
 */ 
 
-// var rows,cols;
-// var output = "";
-// for(rows = 1; rows <= 5 ; rows++){ //rows = 2
-//     for(cols = 1; cols <= rows; cols++){ // cols = 2
-//         output = output + "*"; // //"1\n12"
-//     }
-//     output = output + "\n"; //"1\n22\n"
-// }
-// console.log(output)
+var rows,cols;
+let n = 5;
+var output = "";
+for(rows = 1; rows <= 5 ; rows++){ //rows = 2
+    for(cols = 1; cols <= rows; cols++){ // cols = 2
+        output = output + rows; // //"1\n12"
+    }
+    output = output + "\n"; //"1\n22\n"
+}
+console.log(output)
 
 
 /* 
@@ -183,27 +184,27 @@
 
 */
 
-var n = 5;
-var output = "";
+// var n = 5;
+// var output = "";
 
-for(rows = 1; rows <= n ; rows++){
-    for(spaces = 0; spaces < n - rows; spaces++){
-        output = output + " ";
-    }
-    for(stars = 0 ; stars < rows; stars++){
-        output = output + "*";
-    }
-    output = output + "\n";
-}
+// for(rows = 1; rows <= n ; rows++){
+//     for(spaces = 0; spaces < n - rows; spaces++){
+//         output = output + " ";
+//     }
+//     for(stars = 0 ; stars < rows; stars++){
+//         output = output + "*";
+//     }
+//     output = output + "\n";
+// }
 
-for(rows = 1; rows <= n-1; rows++){
-    for(spaces = 0; spaces < rows ; spaces++){
-        output = output + " ";
-    }
-    for(stars = 0 ; stars < n - rows; stars++){
-        output = output + "*";
-    }
-    output = output + "\n";
-}
+// for(rows = 1; rows <= n-1; rows++){
+//     for(spaces = 0; spaces < rows ; spaces++){
+//         output = output + " ";
+//     }
+//     for(stars = 0 ; stars < n - rows; stars++){
+//         output = output + "*";
+//     }
+//     output = output + "\n";
+// }
 
-console.log(output)
+// console.log(output)

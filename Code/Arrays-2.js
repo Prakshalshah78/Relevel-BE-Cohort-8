@@ -112,6 +112,8 @@
 //     return x*2;
 // }
 
+// let newArr = arr.map(double)
+
 // function triple(x){
 //     return x*3;
 // }
@@ -314,12 +316,171 @@
 // let {brother,sister,...restDetails}= person // ... => rest operator
 // console.log(restDetails)
 
-var person = ["Singing", "Trekking","Sin", "Trek", "ing"];
-//               0          1        2       3       4            
+// var person = ["Singing", "Trekking","Sin", "Trek", "ing"];
+// //               0          1        2       3       4            
 
-let [a,b,...rest]= person;
-//   0 1 23 4
-console.log(a,b,rest)
+// let [a,b,...rest]= person;
+// //   0 1 23 4
+// console.log(a,b,rest)
+
+// var council = [
+//     { id: 2100, name: 'President Jacqueline' },
+//     { id: 2114, name: 'Vice-president James' },
+//     { id: 3016, name: 'House-captain Otis' },
+//     { id: 4818, name: 'Prefect Finneas' }
+// ];
+// //[2100,2114,3016,4818]
+
+// var councilIds = [];
+
+// council.forEach(function(elem){
+//     councilIds.push(elem.id);
+// });
+// console.log(councilIds);
+
+// let ids = council.map(function(elem){
+//     return elem.id
+// })
+// console.log(ids)
+
+// let idsArrow = council.map((elem) => elem.id)
+// console.log(idsArrow)
+
+// var arr= [2,3,4];
+// arr[0]= 1;
+// arr.push(10)
+// console.log(arr)
+
+// arr.pop()
+// arr.pop()
+// console.log(arr)
+
+//reduce =>
 
 
+// var arr1 = [2,3,4]; // sum
+
+// var output = arr1.reduce((sum,curr) => { //es6
+//     sum = sum + curr;
+//     return sum;
+// },0)
+// console.log(output);
+
+// find total years of experience of Sudhakar??
+// var sudhakarData = [
+//     {
+//       id: 111,
+//       name: "Chelsea Foster",
+//       years: 7,
+//     },
+  
+//     {
+//       id: 102,
+//       name: "Aggie Sparling",
+//       years: 13,
+//     },
+  
+//     {
+//       id: 123,
+//       name: "Timmy Matthews",
+//       years: 23,
+//     },
+  
+//     {
+//       id: 119,
+//       name: "Emmet Foster",
+//       years: 22,
+//     }
+//   ];
+
+//   var totalYears = sudhakarData.reduce((sumOfExp,comp)=>{
+//     return sumOfExp+comp.years
+//   },0)
+
+//   console.log(totalYears)
+
+// entire data of comp on which he has worked on as an intern
+// var sudhakarData =
+// [
+//   {
+//     id: 111,
+//     name: "Chelsea Foster",
+//     position: "Intern",
+//   },
+
+//   {
+//     id: 102,
+//     name: "Aggie Sparling",
+//     position: "Employee",
+//   },
+
+//   {
+//     id: 123,
+//     name: "Timmy Matthews",
+//     position: "Intern",
+//   },
+
+//   {
+//     id: 66,
+//     name: "Emmet Foster",
+//     position: "Employee",
+//   }
+// ];
+
+// var interns = sudhakarData.filter((members)=> {
+//     return members.position === 'Intern'
+// })
+// console.log(interns)
+
+// find total exp => workexp + deptexp, of companies 
+// in which he was a permanent employee
+
+var sudhakarData =
+[
+  {
+    id: 111,
+    name: "Chelsea Foster",
+    workExp: 7,
+    deptExp: 6,
+    isPermanent: true,
+  },
+  {
+    id: 102,
+    name: "Aggie Sparling",
+    workExp: 13,
+    deptExp: 10,
+    isPermanent: false,
+  },
+  {
+    id: 123,
+    name: "Timmy Matthews",
+    workExp: 23,
+    deptExp: 15,
+    isPermanent: false,
+  },
+  {
+    id: 66,
+    name: "Emmet Foster",
+    workExp: 22,
+    deptExp: 9,
+    isPermanent: true,
+  },
+  {
+    id: 89,
+    name: "Brent Dolan",
+    workExp: 16,
+    deptExp: 12,
+    isPermanent: true,
+  },
+];
+
+var permEmp = sudhakarData.filter(function (comp){
+    return comp.isPermanent
+})
+
+var sumOfTotalExp = permEmp.reduce(function(acc,currEmp){
+    return acc+currEmp.deptExp+currEmp.workExp
+},0)
+
+console.log(sumOfTotalExp)
 
