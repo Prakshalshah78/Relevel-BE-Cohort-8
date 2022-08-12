@@ -8,16 +8,16 @@
 
 */ 
 
-var rows,cols;
-let n = 5;
-var output = "";
-for(rows = 1; rows <= 5 ; rows++){ //rows = 2
-    for(cols = 1; cols <= rows; cols++){ // cols = 2
-        output = output + rows; // //"1\n12"
-    }
-    output = output + "\n"; //"1\n22\n"
-}
-console.log(output)
+// var rows,cols;
+// let n = 5;
+// var output = "";
+// for(rows = 1; rows <= 5 ; rows++){ //rows = 2
+//     for(cols = 1; cols <= rows; cols++){ // cols = 2
+//         output = output + rows; // //"1\n12"
+//     }
+//     output = output + "\n"; //"1\n22\n"
+// }
+// console.log(output)
 
 
 /* 
@@ -208,3 +208,31 @@ console.log(output)
 // }
 
 // console.log(output)
+
+//    1
+//   2 2
+//  3 3 3
+// 4 4 4 4
+
+//   *
+//  * *
+// * * *
+//* * * *
+
+
+let n = 4;
+let string = "";
+
+// spaces
+
+for(i=1;i<=n;i++){
+    for(j=1;j<=n-i;j++){
+        string += " "
+    }
+    for(stars=0;stars<i;stars++){
+        string+=i+" "
+    }
+    string+="\n"
+}
+
+console.log(string)
