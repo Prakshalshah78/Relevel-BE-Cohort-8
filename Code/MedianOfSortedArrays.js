@@ -35,8 +35,15 @@ function MergeTwoSortedArrays(a1, a2){
     return res;
 }
 
-console.log(MergeTwoSortedArrays([1,3,4,7,10,12],[2,3,6,15]))
+let arr = MergeTwoSortedArrays([1,3,4,7,10,12],[2,3,6,15]);
+console.log(arr);
 
-// res = [1,2,3,4,4,5,6,]
-// a1 = [2,4,5,6,8,9,10]
-// a2 = [1,3,4]
+let med;
+let n = arr.length;
+if(n % 2 == 0){ //even
+    med = (arr[n/2] + arr[(n/2)-1])/2;
+}
+else{
+    med = arr[parseInt(n/2)]
+}
+console.log(`Median is ${med}`);
